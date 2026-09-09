@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && touch dist/.gitkeep",
+    "dev": "node init && vite",
+    "build": "node init && tsc -b && vite build && touch dist/.gitkeep",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "biome check src/ public/themes/",
@@ -16,7 +16,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "dependencies": {
     "@aarkue/tiptap-math-extension": "^1.4.0",
